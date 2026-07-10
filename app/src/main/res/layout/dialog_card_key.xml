@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="@drawable/dialog_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="卡密验证"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="#33FFFFFF" />
+
+    <TextView
+        android:id="@+id/tv_device_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="设备标识: ---"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="正在验证..."
+        android:textColor="@color/text_primary"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_expiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="解锁时间: ---"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="#33FFFFFF" />
+
+    <TextView
+        android:id="@+id/tv_qq_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="联系QQ获取卡密"
+        android:textColor="#FF12B7F5"
+        android:textSize="14sp"
+        android:padding="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+</LinearLayout>
