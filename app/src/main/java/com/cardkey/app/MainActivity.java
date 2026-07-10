@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvStatus;
     private TextView tvDeviceId;
     private TextView tvExpiry;
+    private TextView tvDebug;
     private ProgressBar progressBar;
 
     private String deviceId;
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         tvStatus = cardDialog.findViewById(R.id.tv_status);
         tvDeviceId = cardDialog.findViewById(R.id.tv_device_id);
         tvExpiry = cardDialog.findViewById(R.id.tv_expiry);
+        tvDebug = cardDialog.findViewById(R.id.tv_debug);
         progressBar = cardDialog.findViewById(R.id.progress_bar);
         TextView tvQqContact = cardDialog.findViewById(R.id.tv_qq_contact);
 
@@ -118,6 +120,10 @@ public class MainActivity extends AppCompatActivity {
                     tvStatus.setText(result.message);
                     tvStatus.setTextColor(getColor(R.color.red));
                     tvExpiry.setTextColor(getColor(R.color.red));
+                    if (result.debugInfo != null && !result.debugInfo.isEmpty()) {
+                        tvDebug.setText(result.debugInfo);
+                        tvDebug.setVisibility(View.VISIBLE);
+                    }
                 }
             });
         });
